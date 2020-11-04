@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+      }
+      .bg-black {
+        background: #000;
+      }
+      .ears {
+        height: 50px;
+        position: relative;
+      }
+      .w-h-50 {
+        width: 50px;
+        height: 50px;
+      }
+      .left-ear {
+        position: absolute;
+        border-radius: 50%;
+        left: 60px;
+      }
+      .right-ear {
+        position: absolute;
+        border-radius: 50%;
+        left: 290px;
+      }
+      .left-ear::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #fff;
+        top: 10px;
+        left: 10px;
+      }
+      .right-ear::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #fff;
+        top: 10px;
+        left: 10px;
+      }
+      .bg-white {
+        background: #fff;
+      }
+      .eyes {
+        height: 100px;
+        position: relative;
+      }
+      .left-eye {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        left: 80px;
+        top: 20px;
+      }
+      .right-eye {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        left: 240px;
+        top: 20px;
+      }
+      .left-eye::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #000;
+        top: 10px;
+        left: 10px;
+      }
+      .right-eye::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #000;
+        top: 10px;
+        left: 10px;
+      }
+      #nose {
+        height: 100px;
+        position: relative;
+      }
+      #nose::before {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #f00;
+        left: -10px;
+        top: 5px;
+      }
+      #nose::after {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #f00;
+        right: -10px;
+        top: 5px;
+      }
+      #nose .nose {
+        width: 150px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        left: 125px;
+      }
+      #nose .nose::before {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 20px;
+        border-radius: 50%;
+        background: #000;
+        top: 10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      #nose .nose::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        border-radius: 50%;
+        background: #000;
+        top: 45px;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      #v {
+        height: 150px;
+        position: relative;
+      }
+      #v .v {
+        width: 40px;
+        height: 60px;
+        position: absolute;
+      }
+      #v .left {
+        transform: skewX(40deg);
+        left: 160px;
+        top: 35px;
+      }
+      #v .right {
+        transform: skewX(-40deg);
+        left: 210px;
+        top: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container bg-black">
+      <div class="ears">
+        <div class="left-ear bg-black w-h-50"></div>
+        <div class="right-ear bg-black w-h-50"></div>
+      </div>
+      <div class="eyes">
+        <div class="left-eye bg-white"></div>
+        <div class="right-eye bg-white"></div>
+      </div>
+      <div id="nose">
+        <div class="nose bg-white"></div>
+      </div>
+      <div id="v">
+        <div class="v left bg-white"></div>
+        <div class="v right bg-white"></div>
+      </div>
+    </div>
+  </body>
+</html>
