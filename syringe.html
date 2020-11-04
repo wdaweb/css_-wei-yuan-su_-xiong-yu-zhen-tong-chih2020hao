@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 700px;
+        height: 150px;
+        background: linear-gradient(90deg, #fff 40%, #000 40%, #000 50%, #ffa 50%, #ffa 100%);
+        border: 1px solid #aaa;
+        position: relative;
+      }
+      td {
+        width: 35px;
+        height: 35px;
+        border-left: 1px solid #999;
+      }
+      .container::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 110px;
+        border-radius: 0 10px 10px 0;
+        border-top: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        top: 20px;
+        right: -61px;
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.1) 30%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+      }
+      .container::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 110px;
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        top: 20px;
+        left: -61px;
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.1) 30%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+      }
+      .col::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background: #aaa;
+        top: 75px;
+        right: -161px;
+      }
+      .col::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 150px;
+        border: 1px solid #aaa;
+        border-radius: 10px;
+        top: -1px;
+        right: 760px;
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.1) 30%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+      }
+      .col {
+        width: 700px;
+        height: 150px;
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.1) 30%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(255, 255, 255, 0.3) 100%
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table border="0" cellspacing="0">
+        <tr>
+          <td style="border: none"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td style="border: none"></td>
+          <td style="border-left: 1px solid #555"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <div class="col"></div>
+    </div>
+  </body>
+</html>
